@@ -12,14 +12,14 @@ import {StyleSheet} from 'react-native';
 
 export const FacebookIcon = style => <Icon name="facebook" {...style} />;
 
-class HomeScreen extends Component {
+class UserScreen extends Component {
   render() {
     return (
       <SafeAreaView style={{flex: 1}}>
         <TopNavigation title="MyApp" alignment="center" />
         <Divider />
         <Layout style={styles.container}>
-          <Text style={styles.textTitle}>Home</Text>
+          <Text style={styles.textTitle}>UserScreen</Text>
           <Button icon={FacebookIcon}>Login with Facebook</Button>
         </Layout>
       </SafeAreaView>
@@ -27,7 +27,7 @@ class HomeScreen extends Component {
   }
 }
 
-export default HomeScreen;
+export default UserScreen;
 
 const styles = StyleSheet.create({
   container: {

@@ -2,25 +2,10 @@ import React from 'react';
 import {createAppContainer, SafeAreaView} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
-import {
-  BottomNavigation,
-  BottomNavigationTab,
-  Layout,
-  Text,
-} from '@ui-kitten/components';
+import {BottomNavigation, BottomNavigationTab} from '@ui-kitten/components';
 import HomeScreen from '../screens/auth/Home';
-
-const UsersScreen = () => (
-  <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-    <Text category="h1">USERS</Text>
-  </Layout>
-);
-
-const OrdersScreen = () => (
-  <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-    <Text category="h1">ORDERS</Text>
-  </Layout>
-);
+import UsersScreen from '../screens/auth/UserScreen';
+import OrdersScreen from '../screens/auth/OrderScreen';
 
 const TabBarComponent = ({navigation}) => {
   const onSelect = index => {
@@ -33,9 +18,9 @@ const TabBarComponent = ({navigation}) => {
       <BottomNavigation
         selectedIndex={navigation.state.index}
         onSelect={onSelect}>
-        <BottomNavigationTab title="USERS" />
-        <BottomNavigationTab title="ORDERS" />
         <BottomNavigationTab title="HOME" />
+        <BottomNavigationTab title="ORDERS" />
+        <BottomNavigationTab title="USERS" />
       </BottomNavigation>
     </SafeAreaView>
   );
