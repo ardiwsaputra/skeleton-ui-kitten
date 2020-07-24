@@ -7,6 +7,11 @@ import {mapping, light as lightTheme} from '@eva-design/eva';
 import {EvaIconsPack} from '@ui-kitten/eva-icons';
 import {default as appTheme} from './src/styles/custom-theme.json';
 import {default as customMapping} from './src/styles/custom-mapping.json';
+import {YellowBox} from 'react-native';
+
+YellowBox.ignoreWarnings([
+  'Animated: `useNativeDriver` was not specified. This is a required option and must be explicitly set to `true` or `false`',
+]);
 
 const theme = {...lightTheme, ...appTheme};
 
